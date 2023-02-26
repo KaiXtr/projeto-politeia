@@ -1,0 +1,140 @@
+body {
+	font-family: "Raleway";
+	line-height: 25px;
+	margin: 0px;
+}
+h2 {
+	font-weight: bolder;
+}
+header {
+	background-color: #337AB7;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	align-items: center;
+}
+header img {
+	display: inline-block;
+}
+header ul {
+	padding: 0px;
+	display: inline-block;
+	list-style-type: none;
+}
+header ul li{
+	color: #FFFFFF;
+	padding-left: 30px;
+	display: inline-block;
+}
+header .dropdown-conteudo {
+	background-color: #FFFFFF;
+	text-align: left;
+	min-width: 100px;
+	visibility: hidden;
+	display: block;
+	position: fixed;
+	z-index: 1;
+	transition-duration: 0.2s;
+	opacity: 0%;
+}
+header .dropdown-conteudo li {
+	color: #337AB7;
+	padding: 5px;
+}
+header .dropdown:hover .dropdown-conteudo {
+	visibility: visible;
+	opacity: 100%;
+}
+header .dropdown ul li {
+	display: block;
+}
+#fundo {
+	background-image: url("../img/banner1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 800px;
+}
+nav {
+	padding: 10%;
+	padding-top: 30px;
+}
+nav .noticia {
+	width: 250px;
+	padding: 10px;
+	display: inline-block;
+}
+nav .noticia img {
+	width: 250px;
+	height: 200px;
+}
+nav #selecionar button {
+	background-color: #CCCCCC;
+	border: none;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	transition-duration: 0.2s;
+}
+nav #selecionar button:hover {
+	background-color: #9999FF;
+}
+nav#historia {
+	padding-top: 150px;
+}
+
+nav#historia h1 {
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #DDDDDD;
+}
+nav#historia p {
+	text-align: justify;
+}
+nav#historia strong {
+	font-weight: bolder;
+}
+nav#historia .historia-div {
+	margin-left: 5%;
+	width: 40%;
+	display: inline-block;
+}
+#midias-sociais {
+	background-color: #888888;
+	text-align: center;
+	padding: 5px;
+	height: 40px;
+}
+#midias-sociais i {
+	padding-left: 10px;
+	width: 50px;
+	height: 50px;
+}
+footer {
+	background-color: #CCCCCC;
+	text-align: center;
+	padding: 2%;
+}
+footer .rodape-divs {
+	text-align: left;
+	margin-left: 5%;
+	display: inline-block;
+}
+footer .rodape-divs h2 {
+	color: #337AB7;
+	border-bottom: 2px solid #337AB7;
+}
+footer .rodape-divs ul {
+	list-style-type: none;
+	padding: 0px;
+}
+footer span {
+	text-align: center;
+}
+a:link,a:visited{
+	color: #0000FF;
+	text-decoration: none;
+}
+a:hover,a:active{
+	color: #0000FF;
+	text-decoration: none;
+}
