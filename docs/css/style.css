@@ -9,22 +9,30 @@ h2 {
 header {
 	background-color: #337AB7;
 	text-align: center;
+	padding: 10px;
 	position: fixed;
 	width: 100%;
 	align-items: center;
+	vertical-align: middle;
 }
 header img {
 	display: inline-block;
+	vertical-align: middle;
 }
 header ul {
 	padding: 0px;
 	display: inline-block;
 	list-style-type: none;
+	vertical-align: middle;
 }
 header ul li{
 	color: #FFFFFF;
-	padding-left: 30px;
+	margin-left: 30px;
 	display: inline-block;
+	transition-duration: 0.2s;
+}
+header ul li:hover{
+	border-bottom: 2px solid #FFFFFF;
 }
 header .dropdown-conteudo {
 	background-color: #FFFFFF;
@@ -56,12 +64,22 @@ header .dropdown ul li {
 }
 nav {
 	padding: 10%;
+	padding-top: 150px;
+}
+nav#inicio-nav {
 	padding-top: 30px;
 }
+nav #noticias-container {
+	white-space: nowrap;
+	overflow: auto;
+}
 nav .noticia {
+	text-align: left;
 	width: 250px;
 	padding: 10px;
 	display: inline-block;
+	vertical-align: top;
+	white-space: normal;
 }
 nav .noticia img {
 	width: 250px;
@@ -78,10 +96,6 @@ nav #selecionar button {
 nav #selecionar button:hover {
 	background-color: #9999FF;
 }
-nav#historia {
-	padding-top: 150px;
-}
-
 nav#historia h1 {
 	text-align: center;
 	padding-bottom: 20px;
@@ -98,26 +112,47 @@ nav#historia .historia-div {
 	width: 40%;
 	display: inline-block;
 }
+nav#parlamentares div {
+	margin-left: 5%;
+	display: inline-block;
+	vertical-align: top;
+}
+nav#documentos button {
+	color: #FFFFFF;
+	background-color: #337AB7;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	width: 30%;
+	height: 50px;
+	display: inline-block;
+	vertical-align: top;
+	transition-duration: 0.2s;
+}
+nav#documentos button:hover {
+	transform: scale(1.04);
+}
 #midias-sociais {
-	background-color: #888888;
+	background-color: #CBCBCB;
 	text-align: center;
-	padding: 5px;
-	height: 40px;
+	padding: 20px;
 }
 #midias-sociais i {
-	padding-left: 10px;
-	width: 50px;
-	height: 50px;
+	padding-left: 40px;
 }
 footer {
-	background-color: #CCCCCC;
+	background-color: #EFEFEF;
 	text-align: center;
-	padding: 2%;
+	padding-top: 2%;
+	padding-bottom: 60px;
 }
 footer .rodape-divs {
 	text-align: left;
-	margin-left: 5%;
+	margin-left: 4%;
+	margin-bottom: 60px;
+	width: 25%;
 	display: inline-block;
+	vertical-align: top;
 }
 footer .rodape-divs h2 {
 	color: #337AB7;
@@ -125,16 +160,18 @@ footer .rodape-divs h2 {
 }
 footer .rodape-divs ul {
 	list-style-type: none;
+	font-weight: bold;
 	padding: 0px;
 }
 footer span {
 	text-align: center;
+	margin: 30px;
 }
 a:link,a:visited{
-	color: #0000FF;
+	color: #337AB7;
 	text-decoration: none;
 }
 a:hover,a:active{
-	color: #0000FF;
+	color: #337AB7;
 	text-decoration: none;
 }
