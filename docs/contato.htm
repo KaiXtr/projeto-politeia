@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto Politéia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://kit.fontawesome.com/134a7b073f.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/134a7b073f.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<header>
+		<a href="index.htm"><img src="img/logo-politeia-branca.png"></a>
+		<ul>
+			<a href="index.htm"><li>Início</li></a>
+			<li class="dropdown">
+				Quem somos
+				<ul class="dropdown-conteudo">
+					<a href="historia.htm"><li>História</li></a>
+					<a href="edicoes.htm"><li>Edições</li></a>
+					<a href="equipe.htm"><li>Equipe</li></a>
+					<a href="parceiros.htm"><li>Parceiros</li></a>
+				</ul>
+			</li>
+			<a href="index.htm"><li>Imprensa</li></a>
+			<a href="politeiaemfoco.htm"><li>Politéia em foco</li></a>
+			<li class="dropdown">
+				Simulação
+				<ul class="dropdown-conteudo">
+					<a href="projetos.htm"><li>Projetos de lei</li></a>
+					<a href="parlamentares.htm"><li>Parlamentares</li></a>
+					<a href="documentos.htm"><li>Documentos, Guias e Manuais</li></a>
+				</ul>
+			</li>
+			<a href="contato.htm"><li>Contato</li></a>
+		</ul>
+	</header>
+	<nav id="colunas">
+		<h2>Perguntas Frequentes</h2>
+		<button class="btazul faq" onclick="abrir(1)">
+			O que é o politeia?
+			<p id="faq-1">
+				O Politeia foi idealizado como um projeto de ensino, pesquisa, extensão e formação política,
+				centrado na simulação das atividades da Câmara dos Deputados. O objetivo é proporcionar maior
+				proximidade com o processo legislativo, além de aprimorar a relação entre Estado e sociedade civil
+				por meio de experiências práticas do processo político brasileiro.
+				A proposta é utilizar uma metodologia diferente e inovadora de ensino, onde o participante atua
+				desde a construção de projetos de leis, submetidas à uma simulação dos trâmites reais da
+				Câmara dos Deputados, até a ocupação dos diversos cargos dentro da Casa.
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(2)">
+			Existe algum pré-requisito para simular?
+			<p id="faq-2">
+				Sim. O participante deve ser aluno regular da graduação e não poderá ter participado da simulação
+				por 4 edições ou mais. Além disso, não poderá ter sofrido qualquer suspensão à participação ao projeto,
+				independente do período em que esta foi aplicada.
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(3)">
+			Qual a data da simulação?
+			<p id="faq-3">
+				A nossa simulação acontece todo ano durante o recesso parlamentar, geralmente segunda semana de Julho,
+				no meio do ano. Em 2019, acontecerá entre os dias 19 e 26 de julho.
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(4)">
+			Como posso contatar a organização?
+			<p id="faq-4">
+				Pelo formulário de contato acima, pelo email: contatopoliteiaunb@gmail.com ou acesse as nossas
+				redes sociais no facebook (clique aqui) ou instagram (clique aqui). 
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(5)">
+			Quem são os coordenadores?
+			<p id="faq-5">
+				Os coordenadores do projeto estão listados abaixo, mas você pode conferir a lista completa na
+				nossa <a href="equipe.htm">página equipe!</a><br>
+				• Alécio Neves da Silva (Vice-Coordenador de Comunicação)<br>
+				• Bruna Mateus Sousa (Coordenadora Geral)<br>
+				• Carlos Jesus Pereira Jacomes de Souza Júnior (Vice-Coordenador Geral)<br>
+				• Luisa Amaral Córdoba (Vice-Coordenadora Administrativa)<br>
+				• Luiza Paranaguá Bezerra (Coordenadora de Comunicação)<br>
+				• Maria Cláudia Marques Da Silva (Coordenadora Administrativa)<br>
+				• Natália Teixeira de Oliveira (Coordenadora Acadêmica)<br>
+				• Pedro Henrique Leal Constâncio de Sousa (Vice-Coordenador Acadêmico)<br>
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(6)">
+			Quanto custa a simulação?
+			<p id="faq-6">
+				No Politeia 2019, o preço para simular como parlamentar é de R$ 135, como repórter
+				é de R$ 80 e como fotógrafo, R$ 60.
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(7)">
+			Como participar da organização?
+			<p id="faq-7">
+				O processo seletivo acontece sempre no segundo semestre de todo ano, após a simulação.
+				As datas das inscrições serão divulgadas nas nossas redes sociais, fiquem atentos!
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(8)">
+			O politeia tem cotas parlamentares para os simulantes?
+			<p id="faq-8">
+				Dentre o total de vagas para parlamentares, o projeto reserva 30% para cotas de mulheres
+				e 20% para cotas raciais. A inscrição é feita com base na autodeclaração da(o) inscrita(o).
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(9)">
+			O politeia tem hospedagem para os participantes de outros estados?
+			<p id="faq-9">
+				Infelizmente, o projeto não conta com hospedagem para participantes que vem de outros estados.
+				Porém, é possível estabelecer contato com a organização para esclarecer qualquer dúvida sobre
+				sua visita em Brasília.
+			</p>
+		</button>
+
+		<h2>Perguntas Frequentes - Inscrições</h2>
+		<button class="btazul faq" onclick="abrir(10)">
+			Como funciona a seleção para a vaga?
+			<p id="faq-10">
+				As inscrições são contabilizadas por ordem de chegada, ou seja, após a abertura do formulário
+				no dia 06 de maio, às 18h, serão contemplados os primeiros que realizarem a sua inscrição.
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(11)">
+			Não recebi meu email de confirmação, e agora?
+			<p id="faq-11">
+				Todos os contemplados na primeira chamada já receberam e-mails com boletos.
+				Dessa forma, caso não tenha recebido e-mail da organização, você está na lista de espera.
+				<br>
+				Para preservar os nomes dos participantes inscritos, não divulgamos a lista de espera,
+				mas, caso seja de seu interesse, poderá enviar um e-mail para a organização solicitando a sua posição na lista.
+			</p>
+		</button>
+		<button class="btazul faq" onclick="abrir(12)">
+			Como posso efetuar meu pagamento?
+			<p id="faq-12">
+				Caso você tenha conseguido a vaga, iremos enviar seu boleto para efetuação do pagamento em até 3 dias úteis.
+				Lembrando que o envio do comprovante de pagamento é obrigatório para garantir a sua vaga.
+			</p>
+		</button>
+
+		<h2>Fale Conosco</h2>
+		<p>Tem alguma dúvida? Fale com a gente!</p>
+		<form>
+			<label for="nome">Nome</label>
+			<input id="nome" type="text" name="nome">
+			<br>
+			<label for="nome">Email</label>
+			<input id="nome" type="text" name="nome">
+			<br>
+			<label for="nome">Assunto</label>
+			<input id="nome" type="text" name="nome">
+			<br>
+			<label for="nome">Mensagem</label>
+			<textarea></textarea>
+			<br>
+			<input type="submit">
+		</form>
+	</nav>
+	<div id="midias-sociais">
+		<a target="_blank" href="https://www.facebook.com/ProjetoPoliteia/"><i class="fa-brands fa-xl fa-facebook-f"></i></a>
+		<a target="_blank" href="https://www.instagram.com/projetopoliteia/?hl=pt-br"><i class="fa-brands fa-xl fa-instagram"></i></a>
+		<a target="_blank" href="http://www.linkedin.com/in/projetopoliteia"><i class="fa-brands fa-xl fa-linkedin-in"></i></a>
+		<a target="_blank" href="https://www.flickr.com/photos/126270422@N02/"><i class="fa-brands fa-xl fa-flickr"></i></a>
+		<a target="_blank" href="https://twitter.com/ppoliteia"><i class="fa-brands fa-xl fa-twitter"></i></a>
+	</div>
+	<footer>
+		<div class="rodape-divs">
+			<h2>Mapa do Site</h2>
+			<ul>
+				<a href="index.htm"><li>Início</li></a>
+				<a href="projetos.htm"><li>Projetos de lei</li></a>
+				<a href="parlamentares.htm"><li>Parlamentares</li></a>
+				<a href="documentos.htm"><li>Documentos, Guias e Manuais</li></a>
+			</ul>
+		</div>
+		<div class="rodape-divs">
+			<h2>Links Úteis</h2>
+			<ul>
+				<a target="_blank" href="https://www.camara.leg.br/biblioteca-e-publicacoes/"><li>Biblioteca da Câmara</li></a>
+				<a target="_blank" href="https://escolavirtualdecidadania.camara.leg.br/site/"><li>Escola Virtual de Cidadania</li></a>
+				<a target="_blank" href="https://www.youtube.com/channel/UC-ZkSRh-7UEuwXJQ9UMCFJA"><li>Canal da Câmara</li></a>
+				<a target="_blank" href="https://www12.senado.leg.br/manualdecomunicacao"><li>Manual de Redenção do Senado</li></a>
+			</ul>
+		</div>
+		<div class="rodape-divs">
+			<h2>Contato</h2>
+			<ul>
+				<li><b>Email: </b><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contatopoliteiaunb@gmail.com">contatopoliteiaunb@gmail.com</a></li>
+				<li><b>Messenger: </b><a target="_blank" href="https://www.facebook.com/msg/ProjetoPoliteia/?show_interstitial=0&mdotme_uri=https%3A%2F%2Fm.me%2FProjetoPoliteia%3Ffbclid%3DIwAR0CUubW1jKAHNQZpkJXpBQXq1J-3FSkdF38LC9l95d7tVOONeoPLy5GmmU&handler=m.me&referer=https%3A%2F%2Fprojetopoliteia.com.br%2Fcontato%2F" target="_blank">Projeto Politeia</a></li>
+			</ul>
+		</div>
+		<div>
+			<a href="http://www.unb.br/" target="_blank">
+				<img class="parc" src="img/logo-unb.png" title="Universidade de Brasília" alt="Universidade de Brasília" />
+			</a>
+			<a href="http://www2.camara.leg.br/" target="_blank">
+				<img class="parc" src="img/logo-camara.png" title="Câmara dos Deputados" alt="Câmara dos Deputados" />
+			</a>
+			<a href="https://www.strategos.org.br/" target="_blank">
+				<img class="parc" src="img/logo-strategos.png" title="Strategos" alt="Strategos" />
+			</a>
+		</div>
+		<span>© 2023 Projeto Politeia - Projeto de Simulação do Sistema Legislativo Brasileiro | Todos os Direitos Reservados.</span>
+	</footer>
+</body>
+</html>

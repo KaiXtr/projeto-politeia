@@ -31,9 +31,6 @@ header ul li{
 	display: inline-block;
 	transition-duration: 0.2s;
 }
-header ul li:hover{
-	border-bottom: 2px solid #FFFFFF;
-}
 header .dropdown-conteudo {
 	background-color: #FFFFFF;
 	text-align: left;
@@ -58,6 +55,7 @@ header .dropdown ul li {
 }
 #fundo {
 	background-image: url("../img/banner1.jpg");
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 800px;
@@ -84,6 +82,11 @@ nav .noticia {
 nav .noticia img {
 	width: 250px;
 	height: 200px;
+}
+nav p {
+	border: none;
+	border-bottom: 2px solid #DDDDDD;
+	padding-bottom: 30px;
 }
 nav #selecionar button {
 	background-color: #CCCCCC;
@@ -112,25 +115,49 @@ nav#historia .historia-div {
 	width: 40%;
 	display: inline-block;
 }
-nav#parlamentares div {
-	margin-left: 5%;
+nav#colunas div {
+	margin-right: 5%;
 	display: inline-block;
 	vertical-align: top;
 }
-nav#documentos button {
+nav button.btazul {
 	color: #FFFFFF;
 	background-color: #337AB7;
 	border: none;
 	border-radius: 20px;
 	margin: 10px;
 	width: 30%;
-	height: 50px;
+	padding: 20px;
 	display: inline-block;
 	vertical-align: top;
 	transition-duration: 0.2s;
 }
-nav#documentos button:hover {
+nav button.btazul:hover {
 	transform: scale(1.04);
+}
+nav button.faq p {
+	color: #337AB7;
+	background-color: #EFEFEF;
+	text-align: justify;
+	border: none;
+	border-radius: 20px;
+	padding: 10px;
+	display: none;
+}
+nav img.parc {
+	width: 100px;
+	margin: 20px;
+	margin-left: 0px;
+}
+form label {
+	text-align: right;
+}
+form input, form select {
+	background-color: #EFEFEF;
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
 }
 #midias-sociais {
 	background-color: #CBCBCB;
@@ -149,7 +176,7 @@ footer {
 footer .rodape-divs {
 	text-align: left;
 	margin-left: 4%;
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 	width: 25%;
 	display: inline-block;
 	vertical-align: top;
@@ -162,6 +189,11 @@ footer .rodape-divs ul {
 	list-style-type: none;
 	font-weight: bold;
 	padding: 0px;
+}
+footer img.parc {
+	width: 100px;
+	margin: 20px;
+	margin-left: 0px;
 }
 footer span {
 	text-align: center;
