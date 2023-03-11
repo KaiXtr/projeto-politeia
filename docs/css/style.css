@@ -18,6 +18,10 @@ header {
 header img {
 	display: inline-block;
 	vertical-align: middle;
+	transition-duration: .2s;
+}
+header img:hover {
+	transform: scale(1.05);
 }
 header ul {
 	padding: 0px;
@@ -30,6 +34,9 @@ header ul li{
 	margin-left: 30px;
 	display: inline-block;
 	transition-duration: 0.2s;
+}
+header ul li:hover {
+	text-decoration: underline;
 }
 header .dropdown-conteudo {
 	background-color: #FFFFFF;
@@ -51,7 +58,15 @@ header .dropdown:hover .dropdown-conteudo {
 	opacity: 100%;
 }
 header .dropdown ul li {
+	margin: 0px;
+	padding: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	display: block;
+}
+header .dropdown ul li:hover {
+	background-color: #EFEFEF;
+	text-decoration: none;
 }
 #fundo {
 	background-image: url("../img/banner1.jpg");
@@ -98,6 +113,7 @@ nav #selecionar button {
 }
 nav #selecionar button:hover {
 	background-color: #9999FF;
+	cursor: pointer;
 }
 nav#historia h1 {
 	text-align: center;
@@ -159,6 +175,12 @@ form input, form select {
 	padding: 10px;
 	margin: 10px;
 }
+form #nome, form #email, form #instituto, form #curso {
+	width: 30%;
+}
+form #idade {
+	width: 5%;
+}
 #midias-sociais {
 	background-color: #CBCBCB;
 	text-align: center;
@@ -201,9 +223,14 @@ footer span {
 }
 a:link,a:visited{
 	color: #337AB7;
+	border: none;
+	border-bottom: inset 0 3px 0 0 solid #337AB7;
 	text-decoration: none;
+  	transition: border-bottom .3s ease-in-out;
 }
 a:hover,a:active{
 	color: #337AB7;
+	border: none;
+	border-bottom: inset 100px 3px 0 0 solid #337AB7;
 	text-decoration: none;
 }
