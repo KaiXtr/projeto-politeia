@@ -1,3 +1,6 @@
+/*************************
+ ***** Escopo global ****
+*************************/
 :root{
 	--azul: #337AB7;
 	--cinza: #EFEFEF;
@@ -12,6 +15,10 @@ body {
 h2 {
 	font-weight: bolder;
 }
+
+/*************************
+ ****** Cabeçalho *******
+*************************/
 header {
 	background-color: var(--azul);
 	text-align: center;
@@ -78,6 +85,9 @@ header ul#sidebar .dropdown .dropdown-conteudo li:hover {
 	text-decoration: none;
 }
 
+/*********************************************************
+ ***** Banner e transições de carregamento de página ****
+*********************************************************/
 #fundo {
 	background-image: url("../img/banner1.jpg");
 	background-attachment: fixed;
@@ -109,6 +119,10 @@ nav {
   	opacity: 100%;
   }
 }
+
+/*************************
+ ******* Navegação ******
+*************************/
 nav#inicio-nav {
 	padding-top: 30px;
 }
@@ -172,14 +186,22 @@ nav#historia .historia-div {
 	transition-duration: 1s;
 	opacity: 0%;
 }
-nav#historia .historia-div.ativo {
-	opacity: 100%;
-}
 nav#colunas div {
 	margin-right: 5%;
 	display: inline-block;
 	vertical-align: top;
 }
+nav#colunas h3, nav#colunas p {
+	opacity: 0%;
+	transition-duration: .2s;
+}
+nav#colunas h3.ativo, nav#colunas p.ativo {
+	opacity: 100%;
+}
+
+/*************************
+ ** Botões de navegação **
+*************************/
 nav button.btazul {
 	color: var(--branco);
 	background-color: var(--azul);
@@ -204,11 +226,19 @@ nav button.faq p {
 	padding: 10px;
 	display: none;
 }
+
+/*************************
+ ** Logos de parceiros ***
+*************************/
 nav img.parc {
 	width: 100px;
 	margin: 20px;
 	margin-left: 0px;
 }
+
+/*************************
+ ****** Formulários ******
+*************************/
 form label {
 	text-align: right;
 }
@@ -225,14 +255,30 @@ form #nome, form #email, form #instituto, form #curso {
 form #idade {
 	width: 5%;
 }
+
+/*************************
+ **** Ir para o topo ****
+*************************/
+span#ir-topo {
+	margin-left: 40%;
+}
+
+/*************************
+ ***** Redes Sociais ****
+*************************/
 #midias-sociais {
 	background-color: var(--cinza-escuro);
 	text-align: center;
 	padding: 20px;
 }	
 #midias-sociais i {
-	margin-right: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
+
+/*************************
+ ******** Rodapé ********
+*************************/
 footer {
 	background-color: var(--cinza);
 	text-align: center;
@@ -265,6 +311,10 @@ footer span {
 	text-align: center;
 	margin: 30px;
 }
+
+/*************************
+ ******** Links **********
+*************************/
 a:link,a:visited{
 	color: var(--azul);
 	border: none;
@@ -280,7 +330,7 @@ a:hover,a:active{
 }
 
 /* Ajustar tamanho da barra superior */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 800px) {
 	header.minimizada {
 		padding: 2px;
 	}
@@ -296,7 +346,7 @@ a:hover,a:active{
 	}
 }
 /* Estilos para dispositivos mobile */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
 	body {
 		font-size: 14px;
 	}

@@ -11,37 +11,10 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/134a7b073f.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/script.js"></script>
+	<script src="js/w3.js"></script>
 </head>
 <body>
-	<header>
-		<button id="hamburger" onclick="sidebar()">
-			<i class="fa-solid fa-xl fa-bars"></i>
-		</button>
-		<a href="index.htm"><img src="img/logo-politeia-branca.png"></a>
-		<ul id="sidebar">
-			<a href="index.htm"><li>Início</li></a>
-			<li class="dropdown">
-				Quem somos
-				<ul class="dropdown-conteudo">
-					<a href="historia.htm"><li>História</li></a>
-					<a href="edicoes.htm"><li>Edições</li></a>
-					<a href="equipe.htm"><li>Equipe</li></a>
-					<a href="parceiros.htm"><li>Parceiros</li></a>
-				</ul>
-			</li>
-			<li class="dropdown">
-				Simulação
-				<ul class="dropdown-conteudo">
-					<a href="projetos.htm"><li>Projetos de lei</li></a>
-					<a href="parlamentares.htm"><li>Parlamentares</li></a>
-					<a href="documentos.htm"><li>Documentos, Guias e Manuais</li></a>
-				</ul>
-			</li>
-			<a href="noticias.htm"><li>Notícias</li></a>
-			<a href="politeiaemfoco.htm"><li>Politéia em foco</li></a>
-			<a href="contato.htm"><li>Contato</li></a>
-		</ul>
-	</header>
+	<div w3-include-html="include/header.htm"></div>
 	<div id="fundo"></div>
 	<nav id="inicio-nav">
 		<h2>Últimas notícias</h2>
@@ -91,51 +64,9 @@
 			<button>>></button>
 		</div>
 	</nav>
-	<div id="midias-sociais">
-		<a target="_blank" href="https://www.facebook.com/ProjetoPoliteia/"><i class="fa-brands fa-xl fa-facebook-f"></i></a>
-		<a target="_blank" href="https://www.instagram.com/projetopoliteia/?hl=pt-br"><i class="fa-brands fa-xl fa-instagram"></i></a>
-		<a target="_blank" href="http://www.linkedin.com/in/projetopoliteia"><i class="fa-brands fa-xl fa-linkedin-in"></i></a>
-		<a target="_blank" href="https://www.flickr.com/photos/126270422@N02/"><i class="fa-brands fa-xl fa-flickr"></i></a>
-		<a target="_blank" href="https://twitter.com/ppoliteia"><i class="fa-brands fa-xl fa-twitter"></i></a>
-	</div>
-	<footer>
-		<div class="rodape-divs">
-			<h2>Mapa do Site</h2>
-			<ul>
-				<a href="index.htm"><li>Início</li></a>
-				<a href="projetos.htm"><li>Projetos de lei</li></a>
-				<a href="parlamentares.htm"><li>Parlamentares</li></a>
-				<a href="documentos.htm"><li>Documentos, Guias e Manuais</li></a>
-			</ul>
-		</div>
-		<div class="rodape-divs">
-			<h2>Links Úteis</h2>
-			<ul>
-				<a target="_blank" href="https://www.camara.leg.br/biblioteca-e-publicacoes/"><li>Biblioteca da Câmara</li></a>
-				<a target="_blank" href="https://escolavirtualdecidadania.camara.leg.br/site/"><li>Escola Virtual de Cidadania</li></a>
-				<a target="_blank" href="https://www.youtube.com/channel/UC-ZkSRh-7UEuwXJQ9UMCFJA"><li>Canal da Câmara</li></a>
-				<a target="_blank" href="https://www12.senado.leg.br/manualdecomunicacao"><li>Manual de Redenção do Senado</li></a>
-			</ul>
-		</div>
-		<div class="rodape-divs">
-			<h2>Contato</h2>
-			<ul>
-				<li><b>Email: </b><a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=contatopoliteiaunb@gmail.com">contatopoliteiaunb@gmail.com</a></li>
-				<li><b>Messenger: </b><a target="_blank" href="https://www.facebook.com/msg/ProjetoPoliteia/?show_interstitial=0&mdotme_uri=https%3A%2F%2Fm.me%2FProjetoPoliteia%3Ffbclid%3DIwAR0CUubW1jKAHNQZpkJXpBQXq1J-3FSkdF38LC9l95d7tVOONeoPLy5GmmU&handler=m.me&referer=https%3A%2F%2Fprojetopoliteia.com.br%2Fcontato%2F" target="_blank">Projeto Politeia</a></li>
-			</ul>
-		</div>
-		<div>
-			<a href="http://www.unb.br/" target="_blank">
-				<img class="parc" src="img/logo-unb.png" title="Universidade de Brasília" alt="Universidade de Brasília" />
-			</a>
-			<a href="http://www2.camara.leg.br/" target="_blank">
-				<img class="parc" src="img/logo-camara.png" title="Câmara dos Deputados" alt="Câmara dos Deputados" />
-			</a>
-			<a href="https://www.strategos.org.br/" target="_blank">
-				<img class="parc" src="img/logo-strategos.png" title="Strategos" alt="Strategos" />
-			</a>
-		</div>
-		<span>© 2023 Projeto Politeia - Projeto de Simulação do Sistema Legislativo Brasileiro | Todos os Direitos Reservados.</span>
-	</footer>
+	<div w3-include-html="include/footer.htm"></div>
+	<script type="text/javascript">
+		w3.includeHTML();
+	</script>
 </body>
 </html>
