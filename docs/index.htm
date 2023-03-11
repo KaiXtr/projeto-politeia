@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Projeto Politéia</title>
+	<title>Projeto Politeia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
@@ -10,11 +10,15 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link href="css/style.css" type="text/css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/134a7b073f.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 	<header>
+		<button id="hamburger" onclick="sidebar()">
+			<i class="fa-solid fa-xl fa-bars"></i>
+		</button>
 		<a href="index.htm"><img src="img/logo-politeia-branca.png"></a>
-		<ul>
+		<ul id="sidebar">
 			<a href="index.htm"><li>Início</li></a>
 			<li class="dropdown">
 				Quem somos

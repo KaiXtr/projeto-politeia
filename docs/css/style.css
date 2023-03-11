@@ -1,3 +1,9 @@
+:root{
+	--azul: #337AB7;
+	--cinza: #EFEFEF;
+	--cinza-escuro: #CBCBCB;
+	--branco: #FFFFFF;
+}
 body {
 	font-family: "Raleway";
 	line-height: 25px;
@@ -7,13 +13,18 @@ h2 {
 	font-weight: bolder;
 }
 header {
-	background-color: #337AB7;
+	background-color: var(--azul);
 	text-align: center;
 	padding: 10px;
 	position: fixed;
 	width: 100%;
 	align-items: center;
 	vertical-align: middle;
+	z-index: 2;
+	transition-duration: .2s;
+}
+header button#hamburger{
+	display: none;
 }
 header img {
 	display: inline-block;
@@ -23,68 +34,88 @@ header img {
 header img:hover {
 	transform: scale(1.05);
 }
-header ul {
+header ul#sidebar {
 	padding: 0px;
 	display: inline-block;
 	list-style-type: none;
 	vertical-align: middle;
 }
-header ul li{
-	color: #FFFFFF;
+header ul#sidebar li{
+	color: var(--branco);
 	margin-left: 30px;
 	display: inline-block;
 	transition-duration: 0.2s;
 }
-header ul li:hover {
+header ul#sidebar li:hover {
 	text-decoration: underline;
 }
-header .dropdown-conteudo {
-	background-color: #FFFFFF;
+header ul#sidebar .dropdown .dropdown-conteudo {
+	background-color: var(--branco);
 	text-align: left;
 	min-width: 100px;
 	visibility: hidden;
 	display: block;
 	position: fixed;
 	z-index: 1;
+	padding: 0px;
 	transition-duration: 0.2s;
 	opacity: 0%;
 }
-header .dropdown-conteudo li {
-	color: #337AB7;
-	padding: 5px;
-}
-header .dropdown:hover .dropdown-conteudo {
+header ul#sidebar .dropdown:hover .dropdown-conteudo {
 	visibility: visible;
 	opacity: 100%;
 }
-header .dropdown ul li {
+header ul#sidebar .dropdown .dropdown-conteudo li {
+	color: var(--azul);
 	margin: 0px;
 	padding: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	display: block;
 }
-header .dropdown ul li:hover {
-	background-color: #EFEFEF;
+header ul#sidebar .dropdown .dropdown-conteudo li:hover {
+	background-color: var(--cinza);
 	text-decoration: none;
 }
+
 #fundo {
 	background-image: url("../img/banner1.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 800px;
+	animation: 1s ease-out fundotrans;
+}
+@keyframes fundotrans {
+  0% {
+  	background-size: 110%;
+  }
+  100% {
+  	background-size: 100%;
+  }
 }
 nav {
 	padding: 10%;
 	padding-top: 150px;
+	animation: 1s ease-out navtrans;
+}
+@keyframes navtrans {
+  0% {
+  	transform: translateY(30px);
+  	opacity: 0%;
+  }
+  100% {
+  	transform: translateX(0px);
+  	opacity: 100%;
+  }
 }
 nav#inicio-nav {
 	padding-top: 30px;
 }
 nav #noticias-container {
 	white-space: nowrap;
-	overflow: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 nav .noticia {
 	text-align: left;
@@ -93,10 +124,18 @@ nav .noticia {
 	display: inline-block;
 	vertical-align: top;
 	white-space: normal;
+	transition-duration: .2s;
+}
+nav .noticia:hover {
+	transform: scale(1.05);
 }
 nav .noticia img {
 	width: 250px;
 	height: 200px;
+}
+nav .noticia p {
+	text-align: justify;
+	border: none;
 }
 nav p {
 	border: none;
@@ -130,6 +169,11 @@ nav#historia .historia-div {
 	margin-left: 5%;
 	width: 40%;
 	display: inline-block;
+	transition-duration: 1s;
+	opacity: 0%;
+}
+nav#historia .historia-div.ativo {
+	opacity: 100%;
 }
 nav#colunas div {
 	margin-right: 5%;
@@ -137,8 +181,8 @@ nav#colunas div {
 	vertical-align: top;
 }
 nav button.btazul {
-	color: #FFFFFF;
-	background-color: #337AB7;
+	color: var(--branco);
+	background-color: var(--azul);
 	border: none;
 	border-radius: 20px;
 	margin: 10px;
@@ -152,8 +196,8 @@ nav button.btazul:hover {
 	transform: scale(1.04);
 }
 nav button.faq p {
-	color: #337AB7;
-	background-color: #EFEFEF;
+	color: var(--azul);
+	background-color: var(--cinza);
 	text-align: justify;
 	border: none;
 	border-radius: 20px;
@@ -169,7 +213,7 @@ form label {
 	text-align: right;
 }
 form input, form select {
-	background-color: #EFEFEF;
+	background-color: var(--cinza);
 	border: none;
 	border-radius: 10px;
 	padding: 10px;
@@ -182,15 +226,15 @@ form #idade {
 	width: 5%;
 }
 #midias-sociais {
-	background-color: #CBCBCB;
+	background-color: var(--cinza-escuro);
 	text-align: center;
 	padding: 20px;
-}
+}	
 #midias-sociais i {
-	padding-left: 40px;
+	margin-right: 10%;
 }
 footer {
-	background-color: #EFEFEF;
+	background-color: var(--cinza);
 	text-align: center;
 	padding-top: 2%;
 	padding-bottom: 60px;
@@ -204,8 +248,8 @@ footer .rodape-divs {
 	vertical-align: top;
 }
 footer .rodape-divs h2 {
-	color: #337AB7;
-	border-bottom: 2px solid #337AB7;
+	color: var(--azul);
+	border-bottom: 2px solid var(--azul);
 }
 footer .rodape-divs ul {
 	list-style-type: none;
@@ -222,15 +266,104 @@ footer span {
 	margin: 30px;
 }
 a:link,a:visited{
-	color: #337AB7;
+	color: var(--azul);
 	border: none;
-	border-bottom: inset 0 3px 0 0 solid #337AB7;
+	border-bottom: inset 0 3px 0 0 solid var(--azul);
 	text-decoration: none;
   	transition: border-bottom .3s ease-in-out;
 }
 a:hover,a:active{
-	color: #337AB7;
+	color: var(--azul);
 	border: none;
-	border-bottom: inset 100px 3px 0 0 solid #337AB7;
+	border-bottom: inset 100px 3px 0 0 solid var(--azul);
 	text-decoration: none;
+}
+
+/* Ajustar tamanho da barra superior */
+@media screen and (min-width: 400px) {
+	header.minimizada {
+		padding: 2px;
+	}
+	header.minimizada img{
+		height: 30px;
+		margin: 0px;
+		padding: 0px;
+	}
+	header.minimizada ul#sidebar, header.minimizada ul#sidebar li{
+		padding: 2px;
+		margin: 0px;
+		margin-left: 50px;
+	}
+}
+/* Estilos para dispositivos mobile */
+@media screen and (max-width: 400px) {
+	body {
+		font-size: 14px;
+	}
+	header img {
+		width: 40%;
+	}
+	header button#hamburger{
+		background-color: transparent;
+		border: none;
+		display: inline-block;
+		transition-duration: .2s;
+	}
+	header button:hover{
+		transform: scale(1.1);
+	}
+	header ul#sidebar {
+		background-color: var(--azul);
+		text-align: left;
+		top: 0px;
+		left: 0px;
+		width: 0%;
+		height: 100%;
+		position: fixed;
+		visibility: hidden;
+		display: block;
+		transition: width ease-out .2s;
+	}
+	header ul#sidebar li {
+		display: block;
+	}
+	header .dropdown .dropdown-conteudo {
+		display: block;
+	}
+	#fundo {
+		background-size: 150%;
+		background-position: 50% 80px;
+		height: 400px;
+	}
+	nav {
+		padding-top: 80px;
+	}
+	nav#colunas div {
+		margin-right: 5%;
+		display: block;
+	}
+	nav#historia .historia-div {
+		margin-left: 0px;
+		width: 100%;
+		display: block;
+	}
+	nav #noticias-container {
+		white-space: wrap;
+		overflow: hidden;
+	}
+	nav .noticia {
+		text-align: left;
+		width: 250px;
+		padding: 10px;
+		display: block;
+	}
+	nav button.btazul {
+		width: 90%;
+		display: block;	
+	}
+	footer .rodape-divs {
+		width: 90%;
+		margin-bottom: 50px;
+		display: block;
+	}
 }
